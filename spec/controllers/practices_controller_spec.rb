@@ -15,5 +15,4 @@ RSpec.describe PracticesController, type: :controller do
         expect(response).to be_successful
       end
     end
-
 end

@@ -1,12 +1,18 @@
 <div class="job-tracker-index-container">
   <h1>Job Tracker</h1>
-
-<ul>
+<ul class="list-inline">
   <% @job_trackers.each do |job| %>
-  <li> <%= link_to job.company, job_tracker_path(job)%> - <%= job.status%></li>
+  <div class="list-group-item list-group-item-action list-group-item-light">
+  <li>Company: <%= button_to job.company, job_tracker_path(job), method: :get, class: "btn btn-primary"%>
+    <br>
+    Status: <%= job.status%>
+    <br>
+    Last Contact <%= job.activity %>
+    </li>
+  </div>
+
   <% end %>
 </ul>
-
 
   <%= button_to "Add Job To Tracker", new_job_tracker_path, method: :get, class: "btn btn-primary"%>
 </div>

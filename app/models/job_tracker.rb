@@ -4,4 +4,6 @@ class JobTracker < ApplicationRecord
   def trackers(array)
     array.uniq
   end
+
+  
 end
