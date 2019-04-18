@@ -1,5 +1,14 @@
-<h1><%= @user.first_name%> Notes</h1>
+<div class="notes-index-container">
+  <h1><%= @user.first_name%> Notes</h1>
 
+  <ul>
+    <% @notes.each do |note| %>
+    <li><%= link_to note.title, note_path(note) %> -<%= note.created_at %></li>
+    <% end %>
+  </ul>
+</div>
+
+<<<<<<< HEAD
 <ul>
   <% @notes.each do |note| %>
   <li><%= link_to note.title, note_path(note) %> - <%= note.dat %></li>
@@ -7,3 +16,5 @@
 </ul>
 
 <%= button_to "Add Note", new_note_path, method: :get%>
+=======
+>>>>>>> cf058c3f4112b30f3abbe6dbba35ea9f358d5bdd

@@ -1,7 +1,9 @@
-<h1>Practice Problems</h1>
+<div class="practice-problems-index-container">
+  <h1>Practice Problems</h1>
 
-<ol>
-  <% @practices.each do |q| %>
-  <li><%= link_to q.question, practice_path(q)%></li>
-  <% end %>
-</ol>
+  <ol>
+    <% @practices.each do |q| %>
+    <li><%= link_to q.question, practice_path(q)%></li>
+    <% end %>
+  </ol>
+</div>
