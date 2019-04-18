@@ -8,7 +8,9 @@
   <br>
   <h2>Skills</h2>
   <ul>
-    <li><%= @resume.skills %></li>
+    <% @resume.split_skills.each do |skill| %>
+    <li><%= skill %></li>
+    <% end %>
   </ul>
   <br>
   <h2>Education</h2>
@@ -19,8 +21,8 @@
   <p>Company: <%= @resume.last_job_company %></p>
   <p>Position: <%= @resume.last_job_title %></p>
   <p>Description: <%= @resume.last_job_description%></p>
-  <p>Start Date: <%= @resume.last_job_start_date %></p>
-  <p>End Date: <%= @resume.last_job_end_date %></p>
+  <p>Start Date: <%= @resume.start_job %></p>
+  <p>End Date: <%= @resume.end_job %></p>
 
     <%= button_to "Edit Resume", edit_resume_path(@resume), method: :get, class: "btn btn-primary"%>
 </div>

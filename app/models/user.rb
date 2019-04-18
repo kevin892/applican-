@@ -6,4 +6,8 @@ class User < ApplicationRecord
   def full_name
     "#{self.first_name} #{self.last_name}"
   end
+
+  def add_s
+    "#{self.first_name}'s"
+  end
 end

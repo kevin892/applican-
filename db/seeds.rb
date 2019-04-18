@@ -11,26 +11,7 @@ Practice.create(
   question: "What is a class?",
   answer: "A text-book answer: classes are a blue-print for constructing computer models for real or virtual objects... boring.
 
-In reality: classes hold data, have methods that interact with that data, and are used to instantiate objects.
-
-Like this.
-
-class WhatAreClasses
-  def initialize
-    @data = 'instance data of this object. Hello.'
-  end
-
-  def method
-    puts @data.gsub('instance', 'altered')
-  end
-end
-
-object = WhatAreClasses.new
-object.method"
-)
-
-
-
+In reality: classes hold data, have methods that interact with that data, and are used to instantiate objects."
 
 Practice.create(
   question: "What are blocks and procs?",
