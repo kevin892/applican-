@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :find_user, only: %i[index show edit update destroy]
+  before_action :find_user, only: %i[index show]
 
   def index
     @users = User.all
@@ -18,8 +18,6 @@ class UsersController < ApplicationController
       render :new
     end
   end
-
-  def edit; end
 
   def show; end
 
