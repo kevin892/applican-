@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap";
+
+.account-page-container {
+    padding-top: 50px;
+}
+
+.account-page-header {
+    text-align: center;
+}
+
+.account-page-row {
+    padding-top: 50px;
+}
+
+.resume-generator-container {
+    padding: 120px;
+    // background: lightgrey;
+}
+
+.form-group {
+    margin-bottom: 0rem;
+}
