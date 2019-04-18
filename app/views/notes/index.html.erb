@@ -6,5 +6,8 @@
     <li><%= link_to note.title, note_path(note) %> -<%= note.created_at %></li>
     <% end %>
   </ul>
+  <%# <div class="btn btn-primary"> %>
+    <%= link_to "Create Note", new_note_path, class: "btn btn-primary"%>
+  <%# </div> %>
 </div>
 
