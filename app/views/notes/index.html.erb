@@ -1,12 +1,17 @@
 <div class="notes-index-container">
+
   <h1><%= @user.add_s%> Notes</h1>
   <%= form_tag notes_path, method: :get do %>
   <%= text_field_tag :search_term %>
-  <%= submit_tag "Search" %>
+  <%= submit_tag "Search", class: "btn btn-primary "%>
+  <br>
+  <br>
   <% end %>
-  <ul>
+  <ul class="list-inline">
     <% @notes.each do |note| %>
-    <li><%= link_to note.title, note_path(note) %> -<%= note.short_date %></li>
+    <div class="list-group-item list-group-item-action list-group-item-light">
+    <li><%= link_to note.title, note_path(note), method: :get, class: "btn btn-primary"  %> -<%= note.short_date %></li>
+    </div>
     <% end %>
   </ul>
   <%# <div class="btn btn-primary"> %>
