@@ -1,16 +1,42 @@
-<h1>Resume Generator</h1><br><br>
+<div class="resume-generator-container"> 
+  <h1>Resume Generator</h1><br><br>
 
-<%= form_for(@resume) do |f| %>
-    <%= f.label "Bio: " %><br><br>
-    <%= f.text_area :bio %><br><br>
-    <%= f.label "Skills: " %>
-    <h5>(Please seperate with ",")</h5>
-    <%= f.text_area :skills %><br><br>
-    <%= f.label "Education: " %>
-      <h5>(Please seperate with ",")</h5>
-    <%= f.text_field :education %><br><br>
-    <%= f.label "Past Job " %>
-      <h5>(Please seperate with ",")</h5>
-    <%= f.text_field :recent_job%><br><br>
-    <%= f.submit "Finished" %>
-<% end %>
+  <%= form_for(@resume) do |f| %>
+    <div class="form-group">
+        <%= f.label "Bio: " %><br><br>
+        <%= f.text_area :bio, class: "form-control" %><br><br>
+    </div>  
+    <div class="form-group">
+      <%= f.label "Skills: " %>
+      <p>(Please seperate with ",")</p>
+      <%= f.text_area :skills, class: "form-control"%><br><br>
+    </div>  
+    <div class="form-group">
+      <%= f.label "Education: " %>
+        <p>(Please seperate with ",")</p>
+      <%= f.text_field :education, class: "form-control" %><br><br>
+    </div>  
+    <div class="form-group">
+      <%= f.label "Past Job " %>
+        <p>(Please seperate with ",")</p>
+      <%= f.text_field :recent_job, class: "form-control"%><br><br>
+    </div>  
+      <%= f.submit "Finished", class: "btn btn-primary"%>
+  <% end %>
+</div>
+<%# <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button> %>
+<%# </form> %>
