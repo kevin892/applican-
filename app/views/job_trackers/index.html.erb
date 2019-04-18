@@ -1,2 +1,9 @@
-<h1>JobTrackers#index</h1>
-<p>Find me in app/views/job_trackers/index.html.erb</p>
+<h1>Job Tracker</h1>
+
+<ul>
+  <% @job_trackers.each do |job| %>
+  <li> <%= link_to job.company, job_tracker_path(job)%>-<%= job.status%></li>
+  <% end %>
+</ul>
+
+<%= button_to "Add Job To Tracker", new_job_tracker_path, method: :get%>
