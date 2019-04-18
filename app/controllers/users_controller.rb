@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
-  before_action :find_user, only: %i[index show]
+  before_action :find_user, only: %i[show]
 
   def index
     @users = User.all
+    redirect_to new_user_path
   end
 
   def new

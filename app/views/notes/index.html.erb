@@ -5,3 +5,5 @@
   <li><%= link_to note.title, note_path(note) %> - <%= note.dat %></li>
   <% end %>
 </ul>
+
+<%= button_to "Add Note", new_note_path, method: :get%>

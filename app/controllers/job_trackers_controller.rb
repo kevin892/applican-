@@ -22,8 +22,18 @@ class JobTrackersController < ApplicationController
 
   def edit; end
 
+  def update
+    @job_tracker.update(job_tracker_params)
+    redirect_to job_tracker_path(@job_tracker)
+  end
+
   def show
     @user = User.last
+  end
+
+  def destroy
+    @job_tracker.delete
+    redirect_to job_trackers_path
   end
 
   private

@@ -6,6 +6,7 @@ class NotesController < ApplicationController
   def index
     @user = User.last
     @notes = Note.all
+    redirect_to new_note_path if @notes.empty?
   end
 
   def new
@@ -22,6 +23,17 @@ class NotesController < ApplicationController
   def edit; end
 
   def show; end
+
+  def update
+    @note.update(note_params)
+    redirect_to notes_path
+  end
+
+  def destroy
+    @note.delete
+    redirect_to notes_path
+  end
+
 
   private
 

@@ -1,2 +1,12 @@
-<h1>Notes#edit</h1>
-<p>Find me in app/views/notes/edit.html.erb</p>
+<div class="notes-new-container">
+    <h1>Edit Note</h1><br><br>
+    <div class="form-group">
+        <%= form_for(@note) do |f| %>
+            <%= f.label "Title: " %>
+            <%= f.text_field :title, class: "form-control" %><br><br>
+            <%= f.label "Body: " %>
+            <%= f.text_area :body, class: "form-control" %><br><br>
+            <%= f.submit "Edit note", class: "btn btn-primary" %>
+        <% end %>
+    </div>
+</div>

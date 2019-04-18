@@ -2,7 +2,7 @@
 
 <ul>
   <% @job_trackers.each do |job| %>
-  <li> <%= link_to job.company, job_tracker_path(job)%>-<%= job.status%></li>
+  <li> <%= link_to job.company, job_tracker_path(job)%> - <%= job.status%></li>
   <% end %>
 </ul>
 
