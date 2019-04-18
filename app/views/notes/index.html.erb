@@ -1,7 +1,9 @@
-<h1><%= @user.first_name%> Notes</h1>
+<div class="notes-index-container">
+  <h1><%= @user.first_name%> Notes</h1>
 
-<ul>
-  <% @notes.each do |note| %>
-  <li><%= link_to note.title, note_path(note) %> -<%= note.created_at %></li>
-  <% end %>
-</ul>
+  <ul>
+    <% @notes.each do |note| %>
+    <li><%= link_to note.title, note_path(note) %> -<%= note.created_at %></li>
+    <% end %>
+  </ul>
+</div>
