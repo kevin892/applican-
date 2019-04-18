@@ -15,6 +15,14 @@
  */
 @import "bootstrap";
 
+// html {
+//     background-color: #add8e6;
+// }
+
+// body {
+//     background-color: #add8e6;
+// }
+
 .account-page-container {
     padding-top: 50px;
 }
@@ -42,4 +50,12 @@
     padding: 100px;
     /* bring your own prefixes */
     // transform: translate(-50%, -50%);
+}
+
+.resume-container {
+    margin: 50px;
+}
+
+.notes-new-container {
+    margin: 50px;
 }
