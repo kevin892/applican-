@@ -1,2 +1,22 @@
-<h1>Resumes#show</h1>
-<p>Find me in app/views/resumes/show.html.erb</p>
+<h1><%= @user.full_name %></h1>
+<p>Email: <%= @user.email %></p>
+<p>LinkedIn: <%= @user.linkedin %></p>
+<p>GitHub: <%= @user.github %></p>
+<hr>
+<h3><%= @resume.bio %></h3>
+<br>
+<h2>Skills</h2>
+<ul>
+  <li><%= @resume.skills %></li>
+</ul>
+<br>
+<h2>Education</h2>
+<p>School: <%= @resume.school %></p>
+<p>Degree: <%= @resume.degree %></p>
+<p>Graduated: <%= @resume.grad_year%></p>
+<h2>Job History</h2>
+<p>Company: <%= @resume.last_job_company %></p>
+<p>Position: <%= @resume.last_job_title %></p>
+<p>Description: <%= @resume.last_job_description%></p>
+<p>Start Date: <%= @resume.last_job_start_date %></p>
+<p>End Date: <%= @resume.last_job_end_date %></p>

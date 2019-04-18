@@ -14,7 +14,10 @@ ActiveRecord::Schema.define(version: 2019_04_18_141435) do
 
   create_table "job_trackers", force: :cascade do |t|
     t.integer "user_id"
-    t.text "sent_apps"
+    t.string "company"
+    t.string "position"
+    t.string "status"
+    t.string "activity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_job_trackers_on_user_id"
@@ -40,8 +43,14 @@ ActiveRecord::Schema.define(version: 2019_04_18_141435) do
     t.integer "user_id"
     t.text "bio"
     t.text "skills"
-    t.text "education"
-    t.text "recent_job"
+    t.string "school"
+    t.string "degree"
+    t.integer "grad_year"
+    t.string "last_job_company"
+    t.string "last_job_title"
+    t.datetime "last_job_start_date"
+    t.datetime "last_job_end_date"
+    t.text "last_job_description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_resumes_on_user_id"

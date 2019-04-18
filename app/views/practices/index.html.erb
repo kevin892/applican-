@@ -1,2 +1,7 @@
-<h1>Practices#index</h1>
-<p>Find me in app/views/practices/index.html.erb</p>
+<h1>Practice Problems</h1>
+
+<ol>
+  <% @practices.each do |q| %>
+  <li><%= link_to q.question, practice_path(q)%></li>
+  <% end %>
+</ol>
