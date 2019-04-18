@@ -1,6 +1,18 @@
+<<<<<<< HEAD
+<h1><%= @job_tracker.company %></h1>
+<h2>Postion: <%= @job_tracker.position %></h2>
+<h2>Current Status: <%= @job_tracker.status %></h2>
+<h2>Last Contact: <%= @job_tracker.activity %></h2>
+
+<%= button_to "Update", edit_job_tracker_path(@job_tracker), method: :get, class: "btn btn-primary"%>
+<br>
+
+<%= button_to "Stop Tracking Job", job_tracker_path(@job_tracker), method: :delete, class: "btn btn-primary"%>
+=======
 <div class="job-tracker-show-container">
     <h1><%= @job_tracker.company %></h1>
     <h2>Postion: <%= @job_tracker.position %></h2>
     <h2>Current Status: <%= @job_tracker.status %></h2>
     <h2>Last Contact: <%= @job_tracker.activity %></h2>
 </div>
+>>>>>>> cf058c3f4112b30f3abbe6dbba35ea9f358d5bdd
