@@ -5,8 +5,12 @@ class NotesController < ApplicationController
 
   def index
     @user = User.last
-    @notes = Note.all
-    redirect_to new_note_path if @notes.empty?
+    if params[:search_term]
+   @notes = Note.where("body LIKE ?", "%#{params[:search_term]}%")
+ else
+   @notes = Note.all
+ end
+
   end
 
   def new
