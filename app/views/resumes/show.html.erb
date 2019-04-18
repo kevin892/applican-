@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="resume-container">
   <h1><%= @user.full_name %></h1>
   <p>Email: <%= @user.email %></p>
@@ -22,3 +23,28 @@
   <p>Start Date: <%= @resume.last_job_start_date %></p>
   <p>End Date: <%= @resume.last_job_end_date %></p>
 </div>
+=======
+<%= button_to "Edit Resume", edit_resume_path(@resume), method: :get, class: "btn btn-primary"%>
+<h1><%= @user.full_name %></h1>
+<p>Email: <%= @user.email %></p>
+<p>LinkedIn: <%= @user.linkedin %></p>
+<p>GitHub: <%= @user.github %></p>
+<hr>
+<h3><%= @resume.bio %></h3>
+<br>
+<h2>Skills</h2>
+<ul>
+  <li><%= @resume.skills %></li>
+</ul>
+<br>
+<h2>Education</h2>
+<p>School: <%= @resume.school %></p>
+<p>Degree: <%= @resume.degree %></p>
+<p>Graduated: <%= @resume.grad_year%></p>
+<h2>Job History</h2>
+<p>Company: <%= @resume.last_job_company %></p>
+<p>Position: <%= @resume.last_job_title %></p>
+<p>Description: <%= @resume.last_job_description%></p>
+<p>Start Date: <%= @resume.last_job_start_date %></p>
+<p>End Date: <%= @resume.last_job_end_date %></p>
+>>>>>>> 9f0e9c688d24e92d7d696160fd0d65ca699aeeba

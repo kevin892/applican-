@@ -23,6 +23,11 @@ class ResumesController < ApplicationController
 
   def edit; end
 
+  def update
+    @resume.update(resume_params)
+    redirect_to resume_path(@resume)
+  end
+
   def show
     @user = User.last
   end
