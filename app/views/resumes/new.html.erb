@@ -1,0 +1,16 @@
+<h1>Resume Generator</h1><br><br>
+
+<%= form_for(@resume) do |f| %>
+    <%= f.label "Bio: " %><br><br>
+    <%= f.text_area :bio %><br><br>
+    <%= f.label "Skills: " %>
+    <h5>(Please seperate with ",")</h5>
+    <%= f.text_area :skills %><br><br>
+    <%= f.label "Education: " %>
+      <h5>(Please seperate with ",")</h5>
+    <%= f.text_field :education %><br><br>
+    <%= f.label "Past Job " %>
+      <h5>(Please seperate with ",")</h5>
+    <%= f.text_field :recent_job%><br><br>
+    <%= f.submit "Finished" %>
+<% end %>

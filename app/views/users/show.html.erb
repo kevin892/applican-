@@ -1,0 +1,7 @@
+<h1>Hi, <%= @user.first_name %>!</h1>
+<h2>What would you like to do?</h2>
+
+<%= button_to "Generate Resume", new_resume_path, method: :get %><br><br>
+<%= button_to "Take note", new_note_path, method: :get %><br><br>
+<%= button_to "Practice", practice_path, method: :get %><br><br>
+<%= button_to "Track Job Aplication", new_job_tracker_path, method: :get%><br><br>
