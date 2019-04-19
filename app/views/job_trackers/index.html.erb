@@ -4,7 +4,6 @@
   <% @job_trackers.each do |job| %>
   <div class="list-group-item list-group-item-action list-group-item-light">
   <li>Company: <%= button_to job.company, job_tracker_path(job), method: :get, class: "btn btn-info"%>
-    <br>
     Status: <%= job.status%>
     <br>
     Last Contact <%= job.activity %>
