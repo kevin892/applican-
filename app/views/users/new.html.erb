@@ -1,20 +1,21 @@
 
-<div class="new-account-form-container">
-    <h1>Welcome to Applican!</h1>
-    <h2>Please make a new account</h2>
-    <div class="form-group">        
-        <%= form_for(@user) do |f| %>
-            <%= f.label "First Name" %>
-            <%= f.text_field :first_name, class: "form-control" %><br><br>
-            <%= f.label "Last Name" %>
-            <%= f.text_field :last_name, class: "form-control"  %><br><br>
-            <%= f.label "Email: " %>
-            <%= f.text_field :email, class: "form-control"  %><br><br>
-            <%= f.label "LinkedIn URL: " %>
-            <%= f.text_field :linkedin, class: "form-control" %><br><br>
-            <%= f.label "Github URL: " %>
-            <%= f.text_field :github, class: "form-control"  %><br><br>
-            <%= f.submit "Finished", class: "btn btn-primary" %>
-        <% end %>
-    </div>
-</div>    
+<div class="border border-light form-group new-account-form-container">        
+    <%= form_for(@user, :html => {:class => 'border border-light p-5'}) do |f| %>
+        <div class="new-account-form-title">
+        <h1>Welcome to Applican!</h1>
+        <h2>Please make a new account</h2>
+        <br>
+        </div>
+        <%= f.label "First Name" %>
+        <%= f.text_field :first_name, class: "form-control" %>
+        <%= f.label "Last Name" %>
+        <%= f.text_field :last_name, class: "form-control"  %>
+        <%= f.label "Email: " %>
+        <%= f.text_field :email, class: "form-control"  %>
+        <%= f.label "LinkedIn URL: " %>
+        <%= f.text_field :linkedin, class: "form-control" %>
+        <%= f.label "Github URL: " %>
+        <%= f.text_field :github, class: "form-control"  %>
+        <%= f.submit "Finished", class: "btn btn-info btn-block my-4" %>
+    <% end %>
+</div>   

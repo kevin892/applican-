@@ -16,23 +16,35 @@
 @import "bootstrap";
 
 // html {
-//     background-color: #add8e6;
+//     background-color: #e7f9fe;
 // }
 
 // body {
-//     background-color: #add8e6;
+//     background-color: #e7f9fe;
 // }
 
-.account-page-container {
-    padding-top: 50px;
+// .account-page-container {
+//     padding-top: 50px;
+// }
+
+.applican-form {
+    margin-right: auto;
+    margin-left: auto;
+    width: 70%;
+    text-align: center;
 }
 
 .account-page-header {
     text-align: center;
 }
 
-.account-page-row {
-    padding-top: 50px;
+// .account-page-row {
+//     padding-bottom: 50px;
+// }
+
+.title-app-link {
+    padding-right: 20px;
+    font-size: 25px;
 }
 
 .resume-generator-container {
@@ -41,8 +53,9 @@
 }
 
 .resume-form-submit-button {
-    margin-left: 50%;
-    margin-right: 50%;
+    // margin-left: 50%;
+    // margin-right: 50%;
+    width: 100%;
 }
 
 .new-account-form-container {

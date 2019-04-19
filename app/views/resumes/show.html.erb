@@ -1,6 +1,6 @@
 <div class="resume-edit-container">
   <h1><%= @user.full_name %></h1>
-  <p>Email: <%= @user.email %></p>
+  <p class="resume-info-tag">Email: <%= @user.email %></p>
   <p>LinkedIn: <%= @user.linkedin %></p>
   <p>GitHub: <%= @user.github %></p>
   <hr>
@@ -23,6 +23,7 @@
   <p>Description: <%= @resume.last_job_description%></p>
   <p>Start Date: <%= @resume.start_job %></p>
   <p>End Date: <%= @resume.end_job %></p>
-
-    <%= button_to "Edit Resume", edit_resume_path(@resume), method: :get, class: "btn btn-primary"%>
+  <br>
+  <br>
+  <%= button_to "Edit Resume", edit_resume_path(@resume), method: :get, class: "btn btn-info"%>
 </div>

@@ -3,8 +3,8 @@
     <h2>Postion: <%= @job_tracker.position %></h2>
     <h2>Current Status: <%= @job_tracker.status %></h2>
     <h2>Last Contact: <%= @job_tracker.activity %></h2>
-    <%= button_to "Update", edit_job_tracker_path(@job_tracker), method: :get, class: "btn btn-primary"%>
+    <%= button_to "Update", edit_job_tracker_path(@job_tracker), method: :get, class: "btn btn-info"%>
     <br>
 
-    <%= button_to "Stop Tracking Job", job_tracker_path(@job_tracker), method: :delete, class: "btn btn-primary"%>
+    <%= button_to "Stop Tracking Job", job_tracker_path(@job_tracker), method: :delete, class: "btn btn-info"%>
 </div>
