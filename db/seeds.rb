@@ -5,13 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+Note.destroy_all
+JobTracker.destroy_all
+Practice.destroy_all
+Resume.destroy_all
+User.destroy_all
 
 Practice.create(
-  question: "What is a class?",
-  answer: "A text-book answer: classes are a blue-print for constructing computer models for real or virtual objects... boring.
-
-In reality: classes hold data, have methods that interact with that data, and are used to instantiate objects."
+  question: "Explain what is class libraries in Ruby?",
+  answer: "Class libraries in Ruby consist of a variety of domains, such as data types, thread programming, various domains, etc.")
 
 Practice.create(
   question: "What are blocks and procs?",
@@ -19,9 +21,37 @@ Practice.create(
 )
 
 Practice.create(
-  question: "What are some advantages of using Ruby?",
-  answer: "Pure Object-Oriented Language: Everything in Ruby is an object—even methods, classes, and booleans. This greatly simplifies things from the coder’s perspective and opens up a range of possibilities.
-Open-Source: Ruby is 100% free and open-source, with a large and enthusiastic community that can be tapped into as a resource.
-Metaprogramming: Ruby is widely considered to be one of the best programming languages out there for metaprogramming, or the ability to write code that can act on other code instead of data.
-Clean and Simple Syntax: The syntax is simple and concise, which allows developers to solve complex programs with fewer lines of code. It also helps that the code is human readable, and easy to follow."
+  question: "Explain what is “Yield” in Ruby on Rails?",
+  answer: "A Ruby method that receives a code block invokes it by calling it with the 'Yield'."
+)
+Practice.create(
+  question: "Explain what is ORM (Object-Relationship-Model) in Rails?",
+  answer: "ORM or Object Relationship Model in Rails indicate that your classes are mapped to the table in the database, and objects are directly mapped to the rows in the table."
+)
+Practice.create(
+  question: "What is the difference between false and nil in Ruby?",
+  answer: "In Ruby False indicates a Boolean datatype, while Nil is not a data type, it have an object_id 4."
+)
+Practice.create(
+  question: "What is Rails Migration?",
+  answer: "Rails Migration enables Ruby to make changes to the database schema, making it possible to use a version control system to leave things synchronized with the actual code."
+)
+Practice.create(
+  question: " Explain what is rake in Rails?",
+  answer: "Rake is a Ruby Make; it is a Ruby utility that substitutes the Unix utility ‘make’, and uses a ‘Rakefile’ and ‘.rake files’ to build up a list of tasks. In Rails, Rake is used for normal administration tasks like migrating the database through scripts, loading a schema into the database, etc."
+)
+
+Practice.create(
+  question: "Explain how you can list all routes for an application?",
+  answer: "To list out all routes for an application you can write rake routes in the terminal."
+)
+
+Practice.create(
+  question: "Explain how can we define Ruby regular expressions?",
+  answer: "Ruby regular expression is a special sequence of characters that helps you match or find other strings. A regular expression literal is a pattern between arbitrary delimiters or slashes followed by %r."
+)
+
+Practice.create(
+  question: "Explain what is Interpolation in Ruby?",
+  answer: "Ruby Interpolation is the process of inserting a string into a literal.  By placing a Hash (#) within {} open and close brackets, one can interpolate a string into the literal."
 )

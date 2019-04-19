@@ -3,7 +3,12 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-    redirect_to new_user_path
+    @user = User.last
+      if @user == nil
+      redirect_to new_user_path
+    else
+      redirect_to user_path(@user)
+    end
   end
 
   def new

@@ -4,6 +4,12 @@ class ResumesController < ApplicationController
   def index
 
     @resumes = Resume.all
+    @resume = Resume.last
+    if @resume == nil
+      redirect_to new_resume_path
+    else
+      redirect_to resume_path(@resume)
+    end
   end
 
   def new
