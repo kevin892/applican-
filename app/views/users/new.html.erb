@@ -1,7 +1,7 @@
 <div class="border border-light form-group new-account-form-container">
   <%= form_for(@user, :html => {:class => 'border border-light p-5'}) do |f| %>
   <div class="new-account-form-title">
-    <h1>Welcome to Applican!</h1>
+    <h1>Welcome to Applican! </h1>
     <h2>Please make a new account</h2>
     <%@user.errors.full_messages.each do |message| %>
       <p><%=message%></p>
