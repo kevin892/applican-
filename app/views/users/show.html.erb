@@ -6,7 +6,7 @@
 <%= button_to "Practice", practices_path, method: :get %><br><br>
 <%= button_to "Track Job Aplication", new_job_tracker_path, method: :get%><br><br>
 -->
-<div class="container account-page-container">
+<div class="account-page-container">
     <div class="row account-page-header">
         <div class="col-xl">
             <br>
@@ -50,7 +50,7 @@
                     <h5 class="card-title">Practice</h5>
                     <p class="card-text">Practice coding problems and interview prep.</p>
                     <%# <a href="#" class="btn btn-info">Go somewhere</a> %>
-                    <%= button_to "Practice", practice_path, method: :get, class: "btn btn-info btn-account-page" %>
+                    <%= button_to "Practice", "/practices/", method: :get, class: "btn btn-info btn-account-page" %>
                 </div>
             </div>
         </div>
