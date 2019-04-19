@@ -1,9 +1,9 @@
 class JobTracker < ApplicationRecord
   belongs_to :user
 
-  def trackers(array)
-    array.uniq
-  end
+    validates :company, {
+    presence: true,
+    uniqueness: true
+  }
 
-  
 end
