@@ -1,28 +1,43 @@
 <div class="resume-edit-container">
-  <h1><%= @user.full_name %></h1>
-  <p>Email: <%= @user.email %></p>
-  <p>LinkedIn: <%= @user.linkedin %></p>
-  <p>GitHub: <%= @user.github %></p>
+  <div class="row">
+    <div class="col">
+    <h1><%= @user.full_name %></h1>
+    </div>
+    <div class="col contact-info">
+      <p>Email: <%= @user.email %></p>
+    <%# <div class="contact-info-floats"> %>
+    <%# </div> %>
+    <%# <div class="col"> %>
+      <p>LinkedIn: <%= @user.linkedin %></p>
+      <p>GitHub: <%= @user.github %></p>
+    <%# </div> %>
+    </div>
+  </div>
+
   <hr>
   <h3><%= @resume.bio %></h3>
   <br>
-  <h2>Skills</h2>
-  <ul>
-    <% @resume.split_skills.each do |skill| %>
-    <li><%= skill %></li>
-    <% end %>
-  </ul>
+  <div class="skills-section-resume-show">
+    <h2>Skills</h2>
+    <ul>
+      <% @resume.split_skills.each do |skill| %>
+      <li><%= skill %></li>
+      <% end %>
+    </ul>
+  </div>
   <br>
   <h2>Education</h2>
   <p>School: <%= @resume.school %></p>
   <p>Degree: <%= @resume.degree %></p>
   <p>Graduated: <%= @resume.grad_year%></p>
+  <br>
   <h2>Job History</h2>
   <p>Company: <%= @resume.last_job_company %></p>
   <p>Position: <%= @resume.last_job_title %></p>
   <p>Description: <%= @resume.last_job_description%></p>
   <p>Start Date: <%= @resume.start_job %></p>
   <p>End Date: <%= @resume.end_job %></p>
-
-    <%= button_to "Edit Resume", edit_resume_path(@resume), method: :get, class: "btn btn-primary"%>
+  <br>
+  <br>
+  <%= button_to "Edit Resume", edit_resume_path(@resume), method: :get, class: "btn btn-info"%>
 </div>
