@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe User do
   before(:each) do
-    @user = User.create!(first_name: "Kevin", last_name: "Ruggiero")
+    @user = User.create!(first_name: "Kevin", last_name: "Ruggiero", email: "kevinbruggiero@gmasil.com", linkedin: "linkedidn.com", github: "githdub.com")
   end
 
   it 'can be created' do
