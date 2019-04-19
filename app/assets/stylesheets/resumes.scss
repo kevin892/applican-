@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .resume-edit-container {
+    font-family: 'EB Garamond', serif;
+    padding: 100px;
+
     p {
         margin: 0 auto;
     }
@@ -12,5 +15,14 @@
 
     h2 {
         font-weight: bold;
+    }
+
+    .contact-info {
+        text-align: right;
+    }
+
+    .skills-section-resue-show {
+        margin-bottom: 0 auto;
+        // padding-bottom: 50px;
     }
 }
