@@ -1,39 +1,42 @@
 <%# <div class="resume-generator-container"> %>
-<div class="form-group">  
-  <div class="applican-form">
-  <br>
-    <h1>Resume Generator</h1><br>
-  <%= form_for(@resume) do |f| %>
+
+  <div class="form-group">
+    <div class="applican-form">
+      <h1>Resume Generator</h1><br><br>
+      <%@resume.errors.full_messages.each do |message| %>
+        <p><%=message%></p>
+      <%end%>
+      <%= form_for(@resume) do |f| %>
       <%# <h3>Info</h3> %>
         <%= f.label "Bio: " %>
         <%= f.text_area :bio, class: "form-control" %>
-      <div class="form-group">
-        <%= f.label "Skills: " %>
-        <p>(Please seperate with ",")</p>
-        <%= f.text_area :skills, class: "form-control" %>
-      </div>
-      <div class="form-group">
-      <h3>Education</h3>
-        <%= f.label "School: " %>
-        <%= f.text_field :school, class: "form-control" %>
-        <%= f.label "Degree: " %>
-        <%= f.text_field :degree, class: "form-control" %>
-        <%= f.label "Year Graduated: " %>
-        <%= f.number_field :grad_year, class: "form-control" %>
-      </div>
-      <div class="form-group">
-      <h3>Job History</h3>
-        <%= f.label "Company: " %>
-        <%= f.text_field :last_job_company, class: "form-control" %>
-        <%= f.label "Position " %>
-        <%= f.text_field :last_job_title, class: "form-control" %>
-        <%= f.label "Job Description: " %>
-        <%= f.text_area :last_job_description, class: "form-control"%>
-        <%= f.label "Start Date: " %>
-        <%= f.date_field :last_job_start_date, class: "form-control" %>
-        <%= f.label "End Date: " %>
-        <%= f.date_field :last_job_end_date, class: "form-control" %>
-      </div>
-      <%= f.submit "Finished", class: "btn btn-info resume-form-submit-button" %>
-  <% end %>
-</div>  
+        <div class="form-group">
+          <%= f.label "Skills: " %>
+          <p>(Please seperate with ",")</p>
+          <%= f.text_area :skills, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <h3>Education</h3>
+          <%= f.label "School: " %>
+          <%= f.text_field :school, class: "form-control" %>
+          <%= f.label "Degree: " %>
+          <%= f.text_field :degree, class: "form-control" %>
+          <%= f.label "Year Graduated: " %>
+          <%= f.number_field :grad_year, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <h3>Job History</h3>
+          <%= f.label "Company: " %>
+          <%= f.text_field :last_job_company, class: "form-control" %>
+          <%= f.label "Position " %>
+          <%= f.text_field :last_job_title, class: "form-control" %>
+          <%= f.label "Job Description: " %>
+          <%= f.text_area :last_job_description, class: "form-control"%>
+          <%= f.label "Start Date: " %>
+          <%= f.date_field :last_job_start_date, class: "form-control" %>
+          <%= f.label "End Date: " %>
+          <%= f.date_field :last_job_end_date, class: "form-control" %>
+        </div>
+        <%= f.submit "Finished", class: "btn btn-info resume-form-submit-button" %>
+      <% end %>
+    </div>
