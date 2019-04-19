@@ -142,7 +142,8 @@
     </div>
     <%# <img class="icon-img" src="../assets/images/resume.png"> %>
     <div class="emoji-navbar">
-    ☀︎
+      <% time = Time.now %>
+    ☀︎ <%=time.strftime("%I:%M%p") %>
     </div>
   </nav>
     <%= yield %>
