@@ -3,7 +3,7 @@
   <h1><%= @user.add_s%> Notes</h1>
   <%= form_tag notes_path, method: :get do %>
   <%= text_field_tag :search_term %>
-  <%= submit_tag "Search", class: "btn btn-primary "%>
+  <%= submit_tag "Search", class: "btn btn-primary btn-sm"%>
   <br>
   <br>
   <% end %>
