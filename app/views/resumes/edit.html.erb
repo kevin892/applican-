@@ -4,35 +4,36 @@
 <%= form_for(@resume) do |f| %>
     <%# <h3>Info</h3> %>
     <div class="form-group">
-      <%= f.label "Bio: " %><br><br>
-      <%= f.text_area :bio, class: "form-control" %><br><br>
+      <%= f.label "Bio: " %>
+      <%= f.text_area :bio, class: "form-control" %>
     </div>
     <div class="form-group">
       <%= f.label "Skills: " %>
       <p>(Please seperate with ",")</p>
-      <%= f.text_area :skills, class: "form-control" %><br><br>
+      <%= f.text_area :skills, class: "form-control" %>
     </div>
     <div class="form-group">
     <h3>Education</h3>
       <%= f.label "School: " %>
-      <%= f.text_field :school, class: "form-control" %><br><br>
+      <%= f.text_field :school, class: "form-control" %>
       <%= f.label "Degree: " %>
-      <%= f.text_field :degree, class: "form-control" %><br><br>
+      <%= f.text_field :degree, class: "form-control" %>
       <%= f.label "Year Graduated: " %>
-      <%= f.number_field :grad_year, class: "form-control" %><br><br>
+      <%= f.number_field :grad_year, class: "form-control" %>
     </div>
     <div class="form-group">
      <h3>Job History</h3>
       <%= f.label "Company: " %>
-      <%= f.text_field :last_job_company, class: "form-control" %><br><br>
+      <%= f.text_field :last_job_company, class: "form-control" %>
       <%= f.label "Position " %>
-      <%= f.text_field :last_job_title, class: "form-control" %><br><br>
+      <%= f.text_field :last_job_title, class: "form-control" %>
       <%= f.label "Job Description: " %>
-      <%= f.text_area :last_job_description, class: "form-control"%><br><br>
+      <%= f.text_area :last_job_description, class: "form-control"%>
       <%= f.label "Start Date: " %>
-      <%= f.date_field :last_job_start_date, class: "form-control" %><br><br>
+      <%= f.date_field :last_job_start_date, class: "form-control" %>
       <%= f.label "End Date: " %>
-      <%= f.date_field :last_job_end_date, class: "form-control" %><br><br>
+      <%= f.date_field :last_job_end_date, class: "form-control" %>
+      <br>
+      <%= f.submit "Finished", class: "btn btn-info resume-edit-form-submit-button" %>
     </div>
-    <%= f.submit "Finished", class: "btn btn-primary resume-form-submit-button" %>
 <% end %>
