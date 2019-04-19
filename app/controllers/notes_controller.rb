@@ -38,7 +38,6 @@ class NotesController < ApplicationController
     redirect_to notes_path
   end
 
-
   private
 
   def note_params

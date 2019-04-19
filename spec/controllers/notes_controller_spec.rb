@@ -6,5 +6,6 @@ RSpec.describe NotesController, type: :controller do
       it 'returns a sucesss response' do
         expect(response).to be_successful
     end
-  end
 end
+
+  end

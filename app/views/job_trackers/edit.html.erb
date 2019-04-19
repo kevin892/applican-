@@ -1,14 +1,14 @@
-<div class="job-tracker-edit-container">
+<div class="job-tracker-new-container form-group">
     <h1>Update Tracker</h1>
     <%= form_for(@job_tracker) do |f| %>
     <%= f.label "Company: " %>
-    <%= f.text_field :company %><br><br>
+    <%= f.text_field :company, class: "form-control"  %><br><br>
     <%= f.label "Position: " %>
-    <%= f.text_field :position %><br><br>
+    <%= f.text_field :position, class: "form-control"  %><br><br>
     <%= f.label "What is the current status of the application?" %>
-    <%= f.text_field :status %><br><br>
+    <%= f.text_field :status, class: "form-control"  %><br><br>
     <%= f.label "When was the last contact you had with this company?" %>
-    <%= f.date_field :activity %><br><br>
-    <%= f.submit "Update", class: "btn btn-primary" %>
+    <%= f.date_field :activity, class: "form-control"  %><br><br>
+    <%= f.submit "Update", class: "btn btn-info job-tracker-edit-btn" %>
     <% end %>
 </div>
